@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAT</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -30,131 +30,299 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+    
+
+    /* Ensure teaser section is responsive */
+    .teaser-image {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="#">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="#">Link 1</a>
-          <a class="navbar-item" href="#">Link 2</a>
-          <a class="navbar-item" href="#">Link 3</a>
-          <a class="navbar-item" href="#">Link 4</a>
-        </div>
-      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"></h1>
-          <div class="is-size-5 publication-authors"></div>
-          <div class="is-size-5 publication-authors"></div>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                </a>
-              </span>
+            <h1 class="title is-1 publication-title">
+              3D representation in 512-Byte: <br> 
+              Variational tokenizer is the key for autoregressive 3D generation
+            </h1>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2412.02202"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2412.02202"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="far fa-images"></i>
+                    </span> -->
+                    <!-- <span>Data</span> -->
+                    </a>
+              </div>
+  
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="#" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered"></h2>
+  <section class="hero teaser">
+    <div class="container">
+      <div class="hero-body">
+        <img id="teaser-image" src="./static/images/fig_teaser.jpg" alt="Teaser Image" class="teaser-image">
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Variational Tokenizer (VAT)</span> compresses unordered 3D data into compact 1D latent tokens, while supporting high-fidelity 3D generation via autoregressive modeling.
+        </h2>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+  <section class="hero teaser"></section>
+    <div class="container">
+      <div class="hero-body">
+        <p class="is-size-9" style="line-height: 1.6; color: #555;">
+          <span class="dnerf" style="font-weight: bold; font-style: italic;">Abstract:</span> Autoregressive transformers have revolutionized high-fidelity image generation. One crucial ingredient lies in the tokenizer, which compresses high-resolution image patches into manageable discrete tokens {with a scanning or hierarchical order} suitable for large language models. 
+          Extending these tokenizers to 3D generation, however, presents a significant challenge: unlike image patches that naturally exhibit {spatial sequence and multi-scale relationships}, 
+          3D data lacks an inherent order, making it difficult to compress into fewer tokens while preserving structural details.
+          To address this, we introduce the Variational Tokenizer (VAT), which transforms unordered 3D data into compact latent tokens with an implicit hierarchy, suited for efficient and high-fidelity {coarse-to-fine} autoregressive modeling. VAT begins with an in-context transformer, which compress numerous unordered 3D features into a reduced token set with minimal information loss. This latent space is then mapped to a Gaussian distribution for residual quantization, with token counts progressively increasing across scales. 
+          In this way, tokens at different scales naturally establish the interconnections by allocating themselves into different subspaces within the same Gaussian distribution, facilitating discrete modeling of token relationships across scales.
+          During the decoding phase, a high-resolution triplane is utilized to convert these compact latent tokens into detailed 3D shapes. 
+          Extensive experiments demonstrate that VAT enables scalable and efficient 3D generation, outperforming existing methods in quality, efficiency, and generalization.
+          Remarkably, VAT achieves up to a 250x compression, reducing a 1MB mesh to just 3.9KB with a 96\% F-score, and can further compress to 256 int8 tokens, achieving a 2000$\times$ reduction while maintaining a 92\% F-score.
+        </p>
+        <img id="teaser-image" src="./static/images/fig_vq.png" alt="Teaser Image" class="teaser-image">
+      </div>
+    </div>
+  </section>
+ 
+  
+  
 
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
+      <h1 class="subtitle has-text-centered">
+         512-Byte code can represent delicated geometry (more than 2000× compression):
+      </h1>
       <div id="results-carousel" class="carousel results-carousel">
-        <!-- Carousel items go here -->
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3"></h2>
-        <div class="content has-text-justified">
-          <p></p>
-          <p></p>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_6.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_8.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_9.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_10.mp4"
+                    type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_11.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_12.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_13.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_14.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_15.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_16.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_17.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_recon/recon_18.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container">
+      <div class="method-module">
+        <h2 class="title is-2 method-title">Methodology</h2>
+
+        <!-- Image Section -->
+        <div class="method-image">
+          <img src="./static/images/pic_pipeline.jpg" alt="Methodology Image" class="method-image-img">
+        </div>
+
+        <!-- Text Section -->
+        <div class="method-description">
+          <p class="is-size-9">
+            (a) VAT comprises the 3D input features into a smaller 1D sequence of latent tokens. The encoder's output retains only the latent tokens, resulting in a compact 1D latent representation that preserves the original information.
+Next, VVQ maps the 1D latent onto a Gaussian distribution, where quantization is applied residually across scales. This process allows tokens to self-organize into distinct subspaces within the same Gaussian distribution.
+Following vector quantization, the triplane decoder recovers the output features based on the discrete token maps, and a triplane-based convolutional neural network, combined with an MLP, upsamples the low-resolution features into a high-resolution 3D occupancy grid.
+          </p>
+          <p class="is-size-9">
+            (b) At the second stage, we train the Next-Scale Autoregressive Transformer on discrete tokens. Here, discrete tokens generated by VAT are used as supervised signal for a decoder-only transformer trained for next-scale prediction. The model is conditioned on 
+            image and text features with a causal attention mask trained by cross-entropy loss.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 
+<section class="section" id="BibTeX"></section>
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+  <script>
+    function scrollCarousel(direction) {
+      const container = document.getElementById('video-carousel');
+      const videoItemWidth = 200; // Each video item's width
+      const gap = 16; // The gap between items
+      const scrollAmount = videoItemWidth + gap; // Total scroll amount
+
+      container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+  </script>
+
 </body>
 </html>
