@@ -138,14 +138,14 @@
       <div class="hero-body">
         <img id="teaser-image" src="./static/images/fig_vq.png" alt="Teaser Image" class="teaser-image">
         <p class="is-size-9" style="line-height: 1.6; color: #555;">
-          <span class="dnerf" style="font-weight: bold; font-style: italic;">Abstract:</span> Autoregressive transformers have revolutionized high-fidelity image generation. One crucial ingredient lies in the tokenizer, which compresses high-resolution image patches into manageable discrete tokens {with a scanning or hierarchical order} suitable for large language models. 
-          Extending these tokenizers to 3D generation, however, presents a significant challenge: unlike image patches that naturally exhibit {spatial sequence and multi-scale relationships}, 
+          <span class="dnerf" style="font-weight: bold; font-style: italic;">Abstract:</span> Autoregressive transformers have revolutionized high-fidelity image generation. One crucial ingredient lies in the tokenizer, which compresses high-resolution image patches into manageable discrete tokens with a scanning or hierarchical order suitable for large language models. 
+          Extending these tokenizers to 3D generation, however, presents a significant challenge: unlike image patches that naturally exhibit spatial sequence and multi-scale relationships, 
           3D data lacks an inherent order, making it difficult to compress into fewer tokens while preserving structural details.
-          To address this, we introduce the Variational Tokenizer (VAT), which transforms unordered 3D data into compact latent tokens with an implicit hierarchy, suited for efficient and high-fidelity {coarse-to-fine} autoregressive modeling. VAT begins with an in-context transformer, which compress numerous unordered 3D features into a reduced token set with minimal information loss. This latent space is then mapped to a Gaussian distribution for residual quantization, with token counts progressively increasing across scales. 
+          To address this, we introduce the Variational Tokenizer (VAT), which transforms unordered 3D data into compact latent tokens with an implicit hierarchy, suited for efficient and high-fidelity coarse-to-fine autoregressive modeling. VAT begins with an in-context transformer, which compress numerous unordered 3D features into a reduced token set with minimal information loss. This latent space is then mapped to a Gaussian distribution for residual quantization, with token counts progressively increasing across scales. 
           In this way, tokens at different scales naturally establish the interconnections by allocating themselves into different subspaces within the same Gaussian distribution, facilitating discrete modeling of token relationships across scales.
           During the decoding phase, a high-resolution triplane is utilized to convert these compact latent tokens into detailed 3D shapes. 
           Extensive experiments demonstrate that VAT enables scalable and efficient 3D generation, outperforming existing methods in quality, efficiency, and generalization.
-          Remarkably, VAT achieves up to a 250x compression, reducing a 1MB mesh to just 3.9KB with a 96\% F-score, and can further compress to 256 int8 tokens, achieving a 2000$\times$ reduction while maintaining a 92\% F-score.
+          Remarkably, VAT achieves up to a 250x compression, reducing a 1MB mesh to just 3.9KB with a 96% F-score, and can further compress to 256 int8 tokens, achieving a 2000x reduction while maintaining a 92% F-score.
         </p>
       </div>
     </div>
