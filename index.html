@@ -38,6 +38,18 @@
       width: 100%;
       height: auto;
     }
+    .method-image-img-small {
+  max-width: 80%;   /* 图片的最大宽度设为容器宽度的 80% */
+  height: auto;     /* 保持图片的纵横比 */
+  margin: 0 auto;   /* 居中显示 */
+  display: block;   /* 使图片成为块级元素 */
+}
+.method-image-img-small-small {
+  max-width: 50%;   /* 图片的最大宽度设为容器宽度的 80% */
+  height: auto;     /* 保持图片的纵横比 */
+  margin: 0 auto;   /* 居中显示 */
+  display: block;   /* 使图片成为块级元素 */
+}
   </style>
 </head>
 <body>
@@ -120,19 +132,11 @@
     </div>
   </section>
 
-  <section class="hero teaser">
-    <div class="container">
-      <div class="hero-body">
-        <img id="teaser-image" src="./static/images/fig_teaser.jpg" alt="Teaser Image" class="teaser-image">
-        <h2 class="subtitle has-text-centered">
-          <span class="dnerf">Variational Tokenizer (VAT)</span> compresses unordered 3D data into compact 1D latent tokens, while supporting high-fidelity 3D generation via autoregressive modeling.
-        </h2>
-      </div>
-    </div>
-  </section>
+ 
   <section class="hero teaser"></section>
     <div class="container">
       <div class="hero-body">
+        <img id="teaser-image" src="./static/images/fig_vq.png" alt="Teaser Image" class="teaser-image">
         <p class="is-size-9" style="line-height: 1.6; color: #555;">
           <span class="dnerf" style="font-weight: bold; font-style: italic;">Abstract:</span> Autoregressive transformers have revolutionized high-fidelity image generation. One crucial ingredient lies in the tokenizer, which compresses high-resolution image patches into manageable discrete tokens {with a scanning or hierarchical order} suitable for large language models. 
           Extending these tokenizers to 3D generation, however, presents a significant challenge: unlike image patches that naturally exhibit {spatial sequence and multi-scale relationships}, 
@@ -143,19 +147,28 @@
           Extensive experiments demonstrate that VAT enables scalable and efficient 3D generation, outperforming existing methods in quality, efficiency, and generalization.
           Remarkably, VAT achieves up to a 250x compression, reducing a 1MB mesh to just 3.9KB with a 96\% F-score, and can further compress to 256 int8 tokens, achieving a 2000$\times$ reduction while maintaining a 92\% F-score.
         </p>
-        <img id="teaser-image" src="./static/images/fig_vq.png" alt="Teaser Image" class="teaser-image">
       </div>
     </div>
   </section>
  
   
-  
+  <section class="hero teaser">
+    <div class="container">
+      <div class="hero-body">
+        <img id="teaser-image" src="./static/images/fig_teaser.jpg" alt="Teaser Image" class="teaser-image">
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Variational Tokenizer (VAT)</span> compresses unordered 3D data into compact 1D latent tokens, while supporting high-fidelity 3D generation via autoregressive modeling.
+        </h2>
+      </div>
+    </div>
+  </section>
 
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <h1 class="subtitle has-text-centered">
-         512-Byte code can represent delicated geometry (more than 2000× compression):
+     
+      <h1 class="title is-3 publication-title">
+        512-Byte code can represent delicated geometry (2000× compression):
       </h1>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
@@ -271,11 +284,164 @@
 </section>
 
 
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-3 publication-title">
+        Results of 3D generation conditioned on images:
+      </h1>
+      <!-- Carousel Container with Image and Video Modules -->
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <!-- Image Module 1 -->
+        <div class="item item-steve">
+          <img src="./static/videos_jinzhi/video_gen/recon_0.png" alt="Image Steve" class="image" />
+        </div>
+
+        <!-- Video Module 1 -->
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_gen/recon_0.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Image Module 2 -->
+        <div class="item item-steve">
+          <img src="./static/videos_jinzhi/video_gen/recon_1.png" alt="Image Steve" class="image" />
+        </div>
+
+        <!-- Video Module 1 -->
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_gen/recon_1.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Image Module 3 -->
+        <div class="item item-steve">
+          <img src="./static/videos_jinzhi/video_gen/recon_2.png" alt="Image Steve" class="image" />
+        </div>
+
+        <!-- Video Module 1 -->
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_gen/recon_2.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Image Module 4 -->
+        <div class="item item-steve">
+          <img src="./static/videos_jinzhi/video_gen/recon_3.png" alt="Image Steve" class="image" />
+        </div>
+
+        <!-- Video Module 1 -->
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_gen/recon_3.mp4" type="video/mp4">
+          </video>
+        </div>
+
+         <!-- Image Module 4 -->
+         <div class="item item-steve">
+          <img src="./static/videos_jinzhi/video_gen/recon_4.png" alt="Image Steve" class="image" />
+        </div>
+
+        <!-- Video Module 1 -->
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_gen/recon_4.mp4" type="video/mp4">
+          </video>
+        </div>
+
+      
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <!-- Carousel Container with Image and Video Modules -->
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <!-- Image Module 1 -->
+        <div class="item item-steve">
+          <img src="./static/videos_jinzhi/video_gen/recon_7.png" alt="Image Steve" class="image" />
+        </div>
+
+        <!-- Video Module 1 -->
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_gen/recon_7.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Image Module 2 -->
+        <div class="item item-steve">
+          <img src="./static/videos_jinzhi/video_gen/recon_8.png" alt="Image Steve" class="image" />
+        </div>
+
+        <!-- Video Module 1 -->
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_gen/recon_8.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Image Module 3 -->
+        <div class="item item-steve">
+          <img src="./static/videos_jinzhi/video_gen/recon_9.png" alt="Image Steve" class="image" />
+        </div>
+
+        <!-- Video Module 1 -->
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_gen/recon_9.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Image Module 4 -->
+        <div class="item item-steve">
+          <img src="./static/videos_jinzhi/video_gen/recon_6.png" alt="Image Steve" class="image" />
+        </div>
+
+        <!-- Video Module 1 -->
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_gen/recon_6.mp4" type="video/mp4">
+          </video>
+        </div>
+
+         <!-- Image Module 4 -->
+         <div class="item item-steve">
+          <img src="./static/videos_jinzhi/video_gen/recon_5.png" alt="Image Steve" class="image" />
+        </div>
+
+        <!-- Video Module 1 -->
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos_jinzhi/video_gen/recon_5.mp4" type="video/mp4">
+          </video>
+        </div>
+
+      
+        
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="hero teaser">
   <div class="hero-body">
     <div class="container">
       <div class="method-module">
-        <h2 class="title is-2 method-title">Methodology</h2>
+        <h2 class="title is-2 method-title" style="text-align: center;"> </h2>
+
+        <h2 class="title is-2 method-title" style="text-align: center;">Two-stage training</h2>
 
         <!-- Image Section -->
         <div class="method-image">
@@ -300,18 +466,108 @@ Following vector quantization, the triplane decoder recovers the output features
 </section>
 
 
-<!-- 
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container">
+      <div class="method-module">
+        <h2 class="title is-2 method-title" style="text-align: center;"> </h2>
+
+        <h2 class="title is-2 method-title" style="text-align: center;">3D Generation Comparision</h2>
+
+        <!-- Image Section -->
+        <div class="method-image">
+          <img src="./static/images/fig_wild_compare.jpg" alt="Methodology Image" class="method-image-img">
+        </div>
+
+        <!-- Text Section -->
+        <div class="method-description">
+          <p class="is-size-9" style="margin-bottom: 40px;">
+            Comparision of state-of-the art 3D generation methods using in-the-wild images. Note that the commercial software displayed on the left may expand thousands of their own data for training, whereas our model is only trained on the Objaverse dataset.
+          </p>
+        </div>
+        
+        <div class="method-description"></div>
+          <p class="is-size-9">
+            
+          </p>
+        </div>
+        <div class="method-image">
+          <img src="./static/images/table_gen.png" alt="Methodology Image" class="method-image-img-small">
+        </div>
+
+        <!-- Text Section -->
+        <div class="method-description">
+          <p class="is-size-9" style="text-align: center;">
+            Quantitative comparison of state-of-the-art 3D generation methods.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container">
+      <div class="method-module">
+        <h2 class="title is-2 method-title" style="text-align: center;"> </h2>
+
+        <h2 class="title is-2 method-title" style="text-align: center;">Necessity of VVQ</h2>
+
+        <!-- Image Section -->
+        <div class="method-image">
+          <img src="./static/images/compare_tab.png" alt="Methodology Image" class="method-image-img-small-small">
+        </div>
+
+        <!-- Text Section -->
+        <div class="method-description" style="margin-bottom: 40px;">
+          <p class="is-size-9">
+            Reconstruction results with varying numbers of tokens, with and without in-context token compression (Comp.) and Variational Vector Quantization (VVQ).
+            By incorporating VVQ, our VAT achieves the best balance between reconstruction accuracy and cross-scale consistency.
+          </p>
+        </div>
+        
+        <div class="method-description"></div>
+          <p class="is-size-9">
+            
+          </p>
+        </div>
+        <div class="method-image">
+          <img src="./static/images/fig_supp_multiscale.jpg" alt="Methodology Image" class="method-image-img">
+        </div>
+
+        <!-- Text Section -->
+        <div class="method-description">
+          <p class="is-size-9" style="text-align: center;">
+            Visualization of reconstructed mesh from different scales of tokens, with and without VVQ.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="section" id="BibTeX"></section>
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>
+      @misc{zhang20243drepresentation512bytevariationaltokenizer,
+        title={3D representation in 512-Byte:Variational tokenizer is the key for autoregressive 3D generation}, 
+        author={Jinzhi Zhang and Feng Xiong and Mu Xu},
+        year={2024},
+        eprint={2412.02202},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2412.02202}, 
+  }
+    </code></pre>
   </div>
-</section> -->
+</section>
 
   <script>
     function scrollCarousel(direction) {
